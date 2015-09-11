@@ -28,7 +28,7 @@ nav {
     padding-bottom: 5px;
     padding-left: 3px;
     margin-left: 0px;
-    margin-right: 1237px;
+    margin-right: 1220px;
 }
 
 h1 {
@@ -36,3 +36,68 @@ h1 {
     margin-top: 20px;
     margin-bottom: 0px;
 }
+
+.css-slideshow{
+    position: relative;
+    max-width: 480px;
+    max-height: 345px;
+    margin: 5em auto .5em auto; 
+    margin-left: 0px;
+    margin-right: 1000px;
+    margin-bottom: 200px;
+    margin-top: 0px
+}
+
+.css-slideshow figure{
+    margin: 0;
+    position: absolute;
+}
+
+.css-slideshow figcaption{
+    position: absolute;
+    top: 0;
+    color: #fff;
+    font-size: .8em;
+    padding: 8px 12px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.css-slideshow:hover figure figcaption{
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+.css-slideshow figure{
+    opacity: 0;
+}
+
+figure:nth-child(1) {
+   animation: xfade 24s 18s infinite;
+}
+figure:nth-child(2) {
+   animation: xfade 24s 12s infinite;
+}
+figure:nth-child(3) {
+   animation: xfade 24s 6s infinite;
+}
+figure:nth-child(4) {
+   animation: xfade 24s 0s infinite;
+}
+
+@keyframes xfade{
+   0%{
+      opacity: 0;
+   }
+   12.5% {
+      opacity:1;
+   }
+   25%{
+      opacity: 0;
+   }
+   99.99% {
+      opacity:0;
+   }
+   100% {
+      opacity:1;
+   }
